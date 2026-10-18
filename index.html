@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple educational household preparedness guide.">
+  <title>Community Preparedness Guide</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <p class="eyebrow">COMMUNITY SAFETY • EDUCATIONAL GUIDE</p>
+      <h1>Community Preparedness Guide</h1>
+      <p>Small steps today can help your household prepare for emergencies.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro card" aria-labelledby="intro-heading">
+      <h2 id="intro-heading">Prepare your household</h2>
+      <p>This page contains general preparedness reminders. It does not provide live alerts, forecasts, or official evacuation instructions. Follow announcements from local authorities during an actual emergency.</p>
+    </section>
+
+    <section class="card" aria-labelledby="checklist-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">FEATURE 1</p>
+          <h2 id="checklist-heading">Preparedness checklist</h2>
+        </div>
+        <span id="progress-text" class="progress-text">0 of 6 completed</span>
+      </div>
+      <div class="progress-track" role="progressbar" aria-label="Checklist progress" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0" id="progress-bar">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+      <ul class="checklist">
+        <li><label><input type="checkbox" class="task-checkbox"> Prepare a flashlight and spare batteries.</label></li>
+        <li><label><input type="checkbox" class="task-checkbox"> Keep drinking water and non-perishable food.</label></li>
+        <li><label><input type="checkbox" class="task-checkbox"> Prepare a basic first-aid kit.</label></li>
+        <li><label><input type="checkbox" class="task-checkbox"> Keep important documents in a safe, waterproof bag.</label></li>
+        <li><label><input type="checkbox" class="task-checkbox"> Write down important family and emergency contacts.</label></li>
+        <li><label><input type="checkbox" class="task-checkbox"> Discuss a family meeting place and communication plan.</label></li>
+      </ul>
+      <button id="reset-button" class="button button-secondary" type="button">Reset checklist</button>
+      <p id="checklist-message" class="status-message" aria-live="polite">Check items as you prepare them.</p>
+    </section>
+
+    <section class="card" aria-labelledby="kit-heading">
+      <p class="eyebrow">FEATURE 2</p>
+      <h2 id="kit-heading">Emergency kit basics</h2>
+      <div class="kit-grid">
+        <article class="kit-item"><span class="kit-icon" aria-hidden="true">💧</span><h3>Water and food</h3><p>Store drinking water and food that can be kept safely.</p></article>
+        <article class="kit-item"><span class="kit-icon" aria-hidden="true">🔦</span><h3>Light and power</h3><p>Keep a flashlight, spare batteries, and a charged power bank if available.</p></article>
+        <article class="kit-item"><span class="kit-icon" aria-hidden="true">🩹</span><h3>First aid</h3><p>Include basic first-aid supplies and any essential personal items.</p></article>
+        <article class="kit-item"><span class="kit-icon" aria-hidden="true">📄</span><h3>Important documents</h3><p>Protect copies of important documents and emergency contact details.</p></article>
+      </div>
+    </section>
+
+    <section class="card reminder-card" aria-labelledby="reminders-heading">
+      <p class="eyebrow">FEATURE 3</p>
+      <h2 id="reminders-heading">General evacuation reminders</h2>
+      <ul>
+        <li>Know the evacuation routes and designated evacuation centers announced by your local authorities.</li>
+        <li>Keep your phone charged when possible and make a family communication plan.</li>
+        <li>Bring essential supplies if you are instructed to evacuate.</li>
+        <li>Follow official instructions and do not rely on this educational page for real-time emergency information.</li>
+      </ul>
+    </section>
+
+    <p class="disclaimer">Educational demonstration only. Information here is general and may not fit every emergency or household.</p>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Community Preparedness Guide • Student frontend prototype</p>
+    </div>
+  </footer>
+</body>
+</html>
