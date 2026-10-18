@@ -1,0 +1,97 @@
+/* Simple responsive styles for the Community Preparedness Guide */
+:root {
+  --navy: #12345a;
+  --blue: #1769aa;
+  --light-blue: #eaf4ff;
+  --background: #f4f7fb;
+  --text: #233044;
+  --muted: #58677a;
+  --border: #d9e3ef;
+  --white: #ffffff;
+  --green: #16794b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--background);
+}
+
+.container {
+  width: min(100% - 32px, 980px);
+  margin-inline: auto;
+}
+
+.site-header {
+  padding: 48px 0 42px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--navy), var(--blue));
+}
+
+.site-header h1 {
+  max-width: 720px;
+  margin: 8px 0;
+  line-height: 1.15;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.site-header p:last-child { max-width: 650px; margin-bottom: 0; }
+.eyebrow { margin: 0 0 6px; font-size: .78rem; font-weight: 700; letter-spacing: .09em; }
+.site-header .eyebrow { color: #d4eaff; }
+
+main { padding-block: 28px 38px; }
+.card {
+  margin-bottom: 22px;
+  padding: clamp(18px, 3vw, 28px);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(18, 52, 90, .05);
+}
+
+h2 { margin: 0 0 12px; color: var(--navy); line-height: 1.25; }
+h3 { margin: 8px 0 4px; font-size: 1.05rem; }
+p { margin-top: 0; }
+.intro { border-left: 5px solid var(--blue); }
+.intro p { margin-bottom: 0; }
+.section-heading { display: flex; justify-content: space-between; align-items: end; gap: 16px; }
+.progress-text { color: var(--muted); font-size: .9rem; text-align: right; }
+.progress-track { height: 10px; margin: 10px 0 18px; overflow: hidden; background: #e3ebf4; border-radius: 999px; }
+.progress-fill { width: 0; height: 100%; background: var(--green); border-radius: inherit; transition: width .2s ease; }
+
+.checklist { list-style: none; padding: 0; margin: 0 0 18px; }
+.checklist li { padding: 12px 10px; border-bottom: 1px solid #edf1f6; }
+.checklist li:last-child { border-bottom: 0; }
+.checklist label { display: flex; align-items: flex-start; gap: 12px; cursor: pointer; }
+input[type="checkbox"] { width: 20px; height: 20px; flex: 0 0 auto; margin-top: 3px; accent-color: var(--blue); }
+input[type="checkbox"]:focus-visible, button:focus-visible { outline: 3px solid #ffbf47; outline-offset: 3px; }
+.checklist input:checked + span { text-decoration: line-through; }
+.button { padding: 10px 16px; border: 0; border-radius: 9px; font: inherit; font-weight: 700; cursor: pointer; }
+.button-secondary { color: var(--navy); background: var(--light-blue); }
+.button-secondary:hover { background: #d9ebff; }
+.status-message { min-height: 1.5em; margin: 12px 0 0; color: var(--muted); font-size: .92rem; }
+
+.kit-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.kit-item { padding: 16px; background: #f7faff; border: 1px solid var(--border); border-radius: 12px; }
+.kit-item p { margin-bottom: 0; color: var(--muted); }
+.kit-icon { font-size: 1.7rem; }
+.reminder-card li { margin-bottom: 8px; }
+.disclaimer { color: var(--muted); font-size: .88rem; text-align: center; }
+footer { padding: 18px 0; color: #e7f2ff; background: var(--navy); font-size: .9rem; }
+footer p { margin: 0; }
+
+@media (max-width: 600px) {
+  .site-header { padding: 34px 0; }
+  .section-heading { align-items: flex-start; flex-direction: column; gap: 4px; }
+  .progress-text { text-align: left; }
+  .kit-grid { grid-template-columns: 1fr; }
+  .card { border-radius: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+}
